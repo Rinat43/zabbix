@@ -68,3 +68,18 @@ systemctl enable zabbix-server zabbix-agent apache2
 3. Скриншот 3 
 ![alt text](https://github.com/Rinat43/zabbix/blob/main/z3.png)
 
+4. Текст испозьванных комманд:
+
+wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.4-1+ubuntu22.04_all.deb
+
+dpkg -i zabbix-release_6.4-1+ubuntu22.04_all.
+
+apt update
+
+apt install zabbix-agent
+
+sudo nano etc/zabbix/zabbix_agetnd.conf (добавил ip своего zabbix-server в строку Server)
+
+systemctl restart zabbix-agent
+
+systemctl enable zabbix-agent
